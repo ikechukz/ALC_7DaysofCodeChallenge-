@@ -40,34 +40,31 @@
         android:layout_marginHorizontal="5dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_one"
+        <EditText
+            android:id="@+id/textedit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nexabold"
-            android:text="Button" />
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+
+            android:textSize="25sp" />
+
 
         <Button
-            android:id="@+id/btn_two"
+            android:id="@+id/submitbutton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/nexabold"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btn_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexabold"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/btn_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nexabold"
-            android:text="Button" />
+            android:text="SUBMIT" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <TextView
         android:layout_width="wrap_content"

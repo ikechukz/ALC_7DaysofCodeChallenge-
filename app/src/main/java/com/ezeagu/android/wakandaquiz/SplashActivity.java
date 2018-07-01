@@ -35,7 +35,6 @@ public class SplashActivity extends AppCompatActivity {
 
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.downanim);
         textView.setAnimation(animation2);
-        //textView2.setAnimation(animation2);
 
 
         button = (Button) findViewById(R.id.buttonstart);

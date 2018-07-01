@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,34 +17,45 @@ public class ResultActivity extends AppCompatActivity {
     TextView resultText;
     TextView remarkText;
     int result;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        Intent intent = getIntent();
-        result = intent.getIntExtra("score6", 0);
+        button = (Button)findViewById(R.id.score);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getIntent();
+                result = intent.getIntExtra("score6", 0);
 
-        resultText = (TextView) findViewById(R.id.resultText);
-        resultText.setText("SCORE: " + result);
+                resultText = (TextView) findViewById(R.id.resultText);
+                resultText.setText("SCORE: " + result);
+                String finalScore = String.valueOf(result);
+                Toast.makeText(ResultActivity.this, "SCORE: "+ finalScore+ " out of 6", Toast.LENGTH_SHORT).show();
 
 
-        if (result < 4) {
-            remarkText = (TextView) findViewById(R.id.remarkText);
-            remarkText.setTextColor(rgb(255, 0, 0));
-            remarkText.setText("BAD SCORE");
-        } else if (result == 4 || result == 5) {
-            remarkText = (TextView) findViewById(R.id.remarkText);
-            remarkText.setTextColor(rgb(255, 255, 255));
-            remarkText.setText("NOT BAD");
-        } else {
-            remarkText = (TextView) findViewById(R.id.remarkText);
-            remarkText.setTextColor(rgb(0, 255, 0));
-            remarkText.setText("VERY GOOD");
-        }
+                if (result < 4) {
+                    remarkText = (TextView) findViewById(R.id.remarkText);
+                    remarkText.setTextColor(rgb(255, 0, 0));
+                    remarkText.setText("BAD SCORE");
+                } else if (result == 4 || result == 5) {
+                    remarkText = (TextView) findViewById(R.id.remarkText);
+                    remarkText.setTextColor(rgb(255, 255, 255));
+                    remarkText.setText("NOT BAD");
+                } else {
+                    remarkText = (TextView) findViewById(R.id.remarkText);
+                    remarkText.setTextColor(rgb(0, 255, 0));
+                    remarkText.setText("VERY GOOD");
+                }
 
-        Timer();
+                Timer();
+            }
+        });
+
+
     }
 
     private void GameOver(){
