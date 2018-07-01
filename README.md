@@ -1,5 +1,5 @@
 # ALC_7DaysofCodeChallenge-
-Link To The APK - https://drive.google.com/open?id=1ALReNn4AD9bdscygLauLG1EUB-sHOhT4
+Link To The APK - https://drive.google.com/file/d/1ZCJN76X1YQSTOWcPcxtVEW9WIwNOi8On/view?usp=sharing
 
 Brief Description -
 The app is made up of three basic parts; the splash page, the questions page and the result page
@@ -9,8 +9,7 @@ The splash page contains an ImageView, two TextViews and a Button.The ImageView 
 the MainActivity page which contains the first question.
 
 The Question Page -
-There are six pages with questions in this app. Each page contains an image, a question and four buttons. Each subsequent page is linked to
-the next by the use of an intent.
+There are six pages with questions in this app. Each subsequent page is linked to the next by the use of an intent.
 
 The Result Page -
 This page collects the score data passed from the question pages and displays it in a TextView. It also contains an if statement in its java
