@@ -66,13 +66,13 @@ public class ResultActivity extends AppCompatActivity {
                 .setPositiveButton("New Game", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        finish();
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     }
                 })
                 .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(ResultActivity.this, "WAKANDA FOREVER", Toast.LENGTH_SHORT).show();
                         System.exit(0);
                         finish();
                     }
